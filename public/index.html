@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Pirates | Cook the Code</title>
+
+    <meta name="description"
+        content="Data Pirates - Portfolio, Projects, Code Library, Blogs and Bookshelf.">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
+
+    <header class="navbar">
+
+        <div class="container">
+
+            <a href="#" class="logo">
+
+                🏴‍☠️ <span>DATA PIRATES</span>
+
+            </a>
+
+            <nav>
+
+                <ul class="nav-links">
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#projects">Projects</a></li>
+
+                    <li><a href="#code">Code Library</a></li>
+
+                    <li><a href="#blogs">Blogs</a></li>
+
+                    <li><a href="#books">Bookshelf</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+            <div id="userAuthArea" class="user-auth-area"></div>
+
+            <a href="login.html" class="login-btn">
+
+                Admin Login
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-grid">
+
+            <div class="hero-left">
+
+                <p class="tagline">
+
+                    🚀 Learn • Build • Share
+
+                </p>
+
+                <h1>
+
+                    Cook the Code.
+
+                </h1>
+
+                <p class="hero-text">
+
+                    Welcome to <strong>Data Pirates</strong>,
+                    a modern knowledge hub where I share
+                    Data Science projects,
+                    Machine Learning experiments,
+                    programming tutorials,
+                    books,
+                    blogs,
+                    and everything I learn along the journey.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn-primary">
+
+                        Explore Projects
+
+                    </a>
+
+                    <a href="#blogs" class="btn-secondary">
+
+                        Read Blogs
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <div class="hero-card">
+
+                    <h3>
+
+                        Featured Skills
+
+                    </h3>
+
+                    <ul>
+
+                        <li>Python</li>
+
+                        <li>Machine Learning</li>
+
+                        <li>Deep Learning</li>
+
+                        <li>SQL Server</li>
+
+                        <li>Power BI</li>
+
+                        <li>Computer Vision</li>
+
+                        <li>Data Visualization</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- ABOUT -->
+    <!-- ========================= -->
+
+    <section id="about" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    About Data Pirates
+
+                </h2>
+
+                <p>
+
+                    Data Pirates is my personal platform to document
+                    projects,
+                    coding knowledge,
+                    technical blogs,
+                    book recommendations,
+                    and my continuous learning journey
+                    as a Data Science Engineer.
+
+                </p>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="info-card">
+
+                    <h3>
+
+                        💻 Code
+
+                    </h3>
+
+                    <p>
+
+                        Practical Python,
+                        SQL,
+                        Machine Learning,
+                        AI,
+                        and programming resources.
+
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <h3>
+
+                        🚀 Projects
+
+                    </h3>
+
+                    <p>
+
+                        Real-world applications,
+                        portfolio projects,
+                        research,
+                        and experiments.
+
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <h3>
+
+                        ✍ Blogs
+
+                    </h3>
+
+                    <p>
+
+                        Learning notes,
+                        tutorials,
+                        experiences,
+                        and technical writing.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- PROJECTS -->
+    <!-- ========================= -->
+
+    <section id="projects" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <p>Some of my recent Data Science and AI projects.</p>
+            </div>
+
+            <div id="projectsContainer" class="projects-grid"></div>
+
+            <div class="view-all-wrap">
+                <a href="all-projects.html" class="secondary-btn">View All Projects →</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- CODE LIBRARY -->
+    <!-- ========================= -->
+
+    <section id="code" class="section alt-section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Code Library</h2>
+                <p>Programming resources and reusable code snippets.</p>
+            </div>
+
+            <div class="card-grid" id="codeContainer">
+
+                <div class="card">
+                    <h3>Loading...</h3>
+                    <p>Please wait while code snippets are loaded.</p>
+                </div>
+
+            </div>
+
+            <div class="view-all-wrap">
+                <a href="all-code.html" class="secondary-btn">View All Code →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- BLOGS -->
+    <!-- ========================= -->
+
+    <section id="blogs" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Latest Blogs</h2>
+                <p>Recent articles will appear here automatically.</p>
+            </div>
+
+            <div class="card-grid" id="blogsContainer">
+
+                <div class="card">
+                    <h3>Loading...</h3>
+                    <p>Please wait while blogs are loaded.</p>
+                </div>
+
+            </div>
+
+            <div class="view-all-wrap">
+                <a href="all-blogs.html" class="secondary-btn">View All Blogs →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- BOOKS -->
+    <!-- ========================= -->
+
+    <section id="books" class="section alt-section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Bookshelf</h2>
+                <p>Books that inspired my learning journey.</p>
+            </div>
+
+            <div class="card-grid" id="booksContainer">
+
+                <div class="card">
+                    <h3>Loading...</h3>
+                    <p>Please wait while books are loaded.</p>
+                </div>
+
+            </div>
+
+            <div class="view-all-wrap">
+                <a href="all-books.html" class="secondary-btn">View All Books →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- CONTACT -->
+    <!-- ========================= -->
+
+    <section id="contact" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Contact</h2>
+
+                <p>Let's connect and build something amazing.</p>
+
+            </div>
+
+            <div class="contact-box">
+
+                <p>📧 betsydnicholraja@gmail.com</p>
+
+                <p>💻 github.com/irenebetsy</p>
+
+                <p>💼 linkedin.com/in/irene-betsy-d-476b2225a</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+
+                © 2026 Data Pirates • Cook the Code • Learn • Build • Share
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="js/account.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
+

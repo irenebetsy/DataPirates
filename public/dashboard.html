@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Data Pirates</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>🏴‍☠️ Data Pirates</h2>
+
+        <ul>
+
+            <li><a href="#" onclick="loadPage('dashboard')">📊 Dashboard</a></li>
+
+            <li><a href="#" onclick="loadProjectsPage()">🚀 Projects</a></li>
+
+            <li><a href="#" onclick="loadCodePage()">💻 Code Library</a></li>
+
+            <li><a href="#" onclick="loadBlogsPage()">✍️ Blogs</a></li>
+
+            <li><a href="#" onclick="loadBooksPage()">📚 Bookshelf</a></li>
+
+            <li><a href="#" onclick="loadCommentsPage()">💬 Comments</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content" id="content">
+
+        <h1>Dashboard</h1>
+
+        <p>Welcome back, Admin 👋</p>
+
+        <div class="dashboard-grid">
+
+            <div class="dash-card">
+                <h2>🚀 Projects</h2>
+                <p>Manage Projects</p>
+            </div>
+
+            <div class="dash-card">
+                <h2>💻 Code Library</h2>
+                <p>Manage Code</p>
+            </div>
+
+            <div class="dash-card">
+                <h2>✍️ Blogs</h2>
+                <p>Manage Blogs</p>
+            </div>
+
+            <div class="dash-card">
+                <h2>📚 Bookshelf</h2>
+                <p>Manage Books</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/admin.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/code.js"></script>
+<script src="js/books.js"></script>
+<script src="js/comments.js"></script>
+
+</body>
+</html>

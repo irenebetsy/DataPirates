@@ -1,0 +1,105 @@
+<div class="page-header">
+
+    <h1>📚 Bookshelf</h1>
+
+    <button id="openBookForm" class="primary-btn">
+        + New Book
+    </button>
+
+</div>
+
+<table class="admin-table">
+
+    <thead>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Status</th>
+            <th>Actions</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="bookRows">
+
+    </tbody>
+
+</table>
+
+<!-- BOOK MODAL -->
+
+<div id="bookModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeBookModal">&times;</span>
+
+        <h2 id="bookModalTitle">Add Book</h2>
+
+        <form id="bookForm">
+
+            <input
+                id="bookTitle"
+                type="text"
+                placeholder="Book Title"
+                required>
+
+            <input
+                id="bookAuthor"
+                type="text"
+                placeholder="Author">
+
+            <textarea
+                id="bookDescription"
+                placeholder="Description / Notes"></textarea>
+
+            <input
+                id="bookCoverURL"
+                type="text"
+                placeholder="Cover Image URL (e.g. assets/books/mybook.jpg)">
+
+            <label for="bookStatus">Reading Status</label>
+
+            <select id="bookStatus">
+
+                <option value="">-- Select Status --</option>
+
+                <option value="Reading">📖 Currently Reading</option>
+
+                <option value="Completed">✅ Completed</option>
+
+                <option value="Wishlist">⭐ Wishlist</option>
+
+            </select>
+
+            <label for="bookRating">Rating (1-5)</label>
+
+            <select id="bookRating">
+
+                <option value="">-- No Rating --</option>
+
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+
+            </select>
+
+            <button
+                type="submit"
+                id="bookSubmitBtn">
+
+                Save Book
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

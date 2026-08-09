@@ -1,0 +1,120 @@
+<div class="page-header">
+
+    <h1>🚀 Project Management</h1>
+
+    <button id="openProjectForm" class="primary-btn">
+        + New Project
+    </button>
+
+</div>
+
+<table class="admin-table">
+
+    <thead>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Title</th>
+            <th>Tech Stack</th>
+            <th>Actions</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="projectRows">
+
+    </tbody>
+
+</table>
+
+<!-- PROJECT MODAL -->
+
+<div id="projectModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeProjectModal">&times;</span>
+
+        <h2 id="projectModalTitle">Create Project</h2>
+
+        <form id="projectForm">
+
+            <input
+                id="projectTitle"
+                type="text"
+                placeholder="Project Title"
+                required>
+
+            <textarea
+                id="projectDescription"
+                placeholder="Description"></textarea>
+
+            <textarea
+                id="projectFeatures"
+                rows="6"
+                placeholder="Features (one per line)"></textarea>
+
+            <input
+                id="projectTechStack"
+                type="text"
+                placeholder="Tech Stack">
+
+            <input
+                id="projectCategory"
+                type="text"
+                placeholder="Category (Machine Learning, AI...)">
+
+            <label for="projectStatus">Project Status</label>
+
+            <select id="projectStatus">
+
+                <option value="">-- Select Status --</option>
+
+                <option value="Completed">✅ Completed</option>
+
+                <option value="WIP">🚧 Work In Progress</option>
+
+                <option value="Planned">📅 Planned</option>
+
+                <option value="On Hold">⏸ On Hold</option>
+
+                <option value="Archived">📦 Archived</option>
+
+            </select>
+
+            <input
+                id="projectDuration"
+                type="text"
+                placeholder="Duration (2 Weeks)">
+
+
+            <input
+                id="projectGithubURL"
+                type="text"
+                placeholder="GitHub URL">
+
+            <input
+                id="projectDemoURL"
+                type="text"
+                placeholder="Live Demo URL">
+
+            <input
+                id="projectImageURL"
+                type="text"
+                placeholder="Image URL (e.g. assets/projects/myimage.png)">
+
+            <button
+                type="submit"
+                id="projectSubmitBtn">
+
+                Publish Project
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
