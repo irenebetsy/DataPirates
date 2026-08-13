@@ -32,7 +32,7 @@ async function loadBlog() {
                 : ""
         }
 
-        <p style="font-size:18px;color:#666;">
+        <p style="font-size:18px;color:#666;text-align:justify;">
             ${blog.Description}
         </p>
 

@@ -588,6 +588,8 @@ button{
 
 .markdown-body{
 
+    text-align: justify;
+
     max-width:900px;
 
     margin:auto;
