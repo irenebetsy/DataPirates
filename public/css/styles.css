@@ -616,7 +616,8 @@ button{
 
 }
 
-.markdown-body ul{
+.markdown-body ul,
+.markdown-body ol{
 
     margin-left:25px;
 
