@@ -221,6 +221,8 @@ function renderBookCard(book) {
 
             <p>${book.Author || ""}</p>
 
+            <p>${book.Description || ""}</p>
+
             ${
                 book.Rating
                 ? `<p>${"⭐".repeat(book.Rating)}</p>`
