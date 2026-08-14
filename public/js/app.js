@@ -229,6 +229,8 @@ function renderBookCard(book) {
 
                 ${book.Author ? `<p class="book-author">by ${book.Author}</p>` : ""}
 
+                <p class="book-added">Added ${new Date(book.CreatedAt).toLocaleDateString()}</p>
+
                 <p class="book-desc">${book.Description}</p>
 
                 ${

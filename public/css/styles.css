@@ -1137,3 +1137,9 @@ button{
     overflow:hidden;
     text-overflow:ellipsis;
 }
+
+.book-added{
+    font-size:12px;
+    color:#888;
+    margin:4px 0;
+}
