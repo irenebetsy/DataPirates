@@ -219,7 +219,7 @@ function renderBookCard(book) {
 
             <h3>${statusEmoji[book.Status] || "📘"} ${book.Title}</h3>
 
-            <p>${book.Author || ""}</p>
+            ${book.Author ? `<p class="book-author">by ${book.Author}</p>` : ""}
 
             <p>${book.Description || ""}</p>
 
