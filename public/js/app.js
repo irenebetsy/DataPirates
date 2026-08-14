@@ -215,25 +215,29 @@ function renderBookCard(book) {
     };
 
     return `
-        <div class="card">
-
-            <h3>${statusEmoji[book.Status] || "📘"} ${book.Title}</h3>
-
-            ${book.Author ? `<p class="book-author">by ${book.Author}</p>` : ""}
-
-            <p>${book.Description || ""}</p>
+        <div class="card book-card ${book.CoverURL ? "has-cover" : ""}">
 
             ${
                 book.CoverURL
                 ? `<img src="${book.CoverURL}" class="book-cover">`
                 : ""
             }
-            
-            ${
-                book.Rating
-                ? `<p>${"⭐".repeat(book.Rating)}</p>`
-                : ""
-            }
+
+            <div class="book-card-content">
+
+                <h3>${statusEmoji[book.Status] || "📘"} ${book.Title}</h3>
+
+                ${book.Author ? `<p class="book-author">by ${book.Author}</p>` : ""}
+
+                <p>${book.Description || ""}</p>
+
+                ${
+                    book.Rating
+                    ? `<p class="book-rating">${"⭐".repeat(book.Rating)}</p>`
+                    : ""
+                }
+
+            </div>
 
         </div>
     `;

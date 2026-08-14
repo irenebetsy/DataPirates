@@ -1107,10 +1107,25 @@ button{
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.book-cover{
-    width: 100%;
+.book-card.has-cover{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.book-card .book-cover{
+    width: 140px;
     height: 200px;
     object-fit: contain;
     border-radius: 8px;
-    margin-bottom: 15px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+.book-card-content{
+    flex: 1;
+}
+
+.book-rating{
+    margin-top: 15px;
 }
