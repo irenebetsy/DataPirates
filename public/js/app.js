@@ -211,7 +211,7 @@ function renderBookCard(book) {
     const statusEmoji = {
         Reading: "📖",
         Completed: "✅",
-        Wishlist: "⭐"
+        Wishlist: "🔖"
     };
 
     return `
