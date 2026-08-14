@@ -1129,3 +1129,11 @@ button{
 .book-rating{
     margin-top: 15px;
 }
+
+.book-desc{
+    display:-webkit-box;
+    -webkit-line-clamp:4;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}

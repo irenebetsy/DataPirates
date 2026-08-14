@@ -229,7 +229,7 @@ function renderBookCard(book) {
 
                 ${book.Author ? `<p class="book-author">by ${book.Author}</p>` : ""}
 
-                <p>${book.Description || ""}</p>
+                <p class="book-desc">${book.Description}</p>
 
                 ${
                     book.Rating
@@ -256,7 +256,20 @@ async function loadBooks(limit = HOMEPAGE_ITEM_LIMIT) {
 
     container.innerHTML = "";
 
-    const items = limit ? books.slice(0, limit) : books;
+    let items;
+
+    if (limit) {
+
+        const pinned = books.filter(b => b.Pinned);
+        const notPinned = books.filter(b => !b.Pinned);
+
+        items = pinned.slice(0, limit).concat(notPinned).slice(0, limit);
+
+    } else {
+
+        items = books;
+
+    }
 
     if (items.length === 0) {
 

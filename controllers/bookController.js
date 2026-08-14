@@ -40,11 +40,11 @@ const getBookById = async (req, res) => {
 // CREATE BOOK
 const createBook = async (req, res) => {
     try {
-        const { title, author, description, coverURL, status, rating } = req.body;
+        const { title, author, description, coverURL, status, rating, pinned  } = req.body;
 
         await sql.query`
-            INSERT INTO "Books" ("Title", "Author", "Description", "CoverURL", "Status", "Rating")
-            VALUES (${title}, ${author}, ${description}, ${coverURL}, ${status}, ${rating})
+            INSERT INTO "Books" ("Title", "Author", "Description", "CoverURL", "Status", "Rating", "Pinned")
+            VALUES (${title}, ${author}, ${description}, ${coverURL}, ${status}, ${rating}, ${pinned})
         `;
 
         res.json({
@@ -60,7 +60,7 @@ const createBook = async (req, res) => {
 const updateBook = async (req, res) => {
     try {
         const { id } = req.params;
-        const { title, author, description, coverURL, status, rating } = req.body;
+        const { title, author, description, coverURL, status, rating, pinned } = req.body;
 
         await sql.query`
             UPDATE "Books"
@@ -70,7 +70,8 @@ const updateBook = async (req, res) => {
                 "Description" = ${description},
                 "CoverURL" = ${coverURL},
                 "Status" = ${status},
-                "Rating" = ${rating}
+                "Rating" = ${rating},
+                "Pinned" = ${pinned}
             WHERE "BookID" = ${id}
         `;
 

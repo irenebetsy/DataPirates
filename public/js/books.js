@@ -128,7 +128,9 @@ async function submitBook() {
 
         status: document.getElementById("bookStatus").value,
 
-        rating: document.getElementById("bookRating").value || null
+        rating: document.getElementById("bookRating").value || null,
+
+        pinned: document.getElementById("bookPinned").checked
 
     };
 
@@ -187,6 +189,8 @@ async function editBook(id) {
     document.getElementById("bookStatus").value = book.Status || "";
 
     document.getElementById("bookRating").value = book.Rating || "";
+
+    document.getElementById("bookPinned").checked = book.Pinned || false;
 
     document.getElementById("bookModalTitle").innerText = "Edit Book";
 
