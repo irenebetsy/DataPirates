@@ -224,6 +224,12 @@ function renderBookCard(book) {
             <p>${book.Description || ""}</p>
 
             ${
+                book.CoverURL
+                ? `<img src="${book.CoverURL}" class="book-cover">`
+                : ""
+            }
+            
+            ${
                 book.Rating
                 ? `<p>${"⭐".repeat(book.Rating)}</p>`
                 : ""
