@@ -219,7 +219,7 @@ function renderBookCard(book) {
 
             ${
                 book.Pinned
-                ? '<p style="font-size:13px;color:#9ca3af;margin:0 0 8px;">📌 Pinned</p>'
+                ? '<p style="font-size:13px;color:#facc15;margin:0 0 8px;width:100%;">📌 Pinned</p>'
                 : ""
             }
 
