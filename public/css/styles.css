@@ -1107,6 +1107,10 @@ button{
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+.book-card{
+    scroll-margin-top:100px;
+}
+
 .book-card.has-cover{
     display: flex;
     gap: 20px;

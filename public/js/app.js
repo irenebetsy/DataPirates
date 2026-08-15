@@ -215,8 +215,9 @@ function renderBookCard(book) {
     };
 
     return `
-        <div class="card book-card ${book.CoverURL ? "has-cover" : ""}">
-
+        
+        <div id="book-${book.BookID}" class="card book-card ${book.CoverURL ? "has-cover" : ""}" onclick="location.href='all-books.html#book-${book.BookID}'" style="cursor:pointer;">
+    
             ${
                 book.CoverURL
                 ? `<img src="${book.CoverURL}" class="book-cover">`
@@ -225,7 +226,7 @@ function renderBookCard(book) {
 
             <div class="book-card-content">
 
-                <h3>${statusEmoji[book.Status] || "📘"} ${book.Title}</h3>
+                <h3>${statusEmoji[book.Status] || "📘"} ${book.Title} ${book.Pinned ? '<span style="font-size:14px;color:#facc15;">📌 Pinned</span>' : ""}</h3>
 
                 ${book.Author ? `<p class="book-author">by ${book.Author}</p>` : ""}
 
@@ -258,19 +259,13 @@ async function loadBooks(limit = HOMEPAGE_ITEM_LIMIT) {
 
     container.innerHTML = "";
 
-    let items;
+    const pinned = books.filter(b => b.Pinned);
+    const notPinned = books.filter(b => !b.Pinned);
+
+    let items = pinned.concat(notPinned);
 
     if (limit) {
-
-        const pinned = books.filter(b => b.Pinned);
-        const notPinned = books.filter(b => !b.Pinned);
-
-        items = pinned.slice(0, limit).concat(notPinned).slice(0, limit);
-
-    } else {
-
-        items = books;
-
+        items = items.slice(0, limit);
     }
 
     if (items.length === 0) {
