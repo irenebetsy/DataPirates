@@ -215,9 +215,14 @@ function renderBookCard(book) {
     };
 
     return `
-        
         <div id="book-${book.BookID}" class="card book-card ${book.CoverURL ? "has-cover" : ""}" onclick="location.href='all-books.html#book-${book.BookID}'" style="cursor:pointer;">
-    
+
+            ${
+                book.Pinned
+                ? '<p style="font-size:13px;color:#9ca3af;margin:0 0 8px;">📌 Pinned</p>'
+                : ""
+            }
+
             ${
                 book.CoverURL
                 ? `<img src="${book.CoverURL}" class="book-cover">`
@@ -226,7 +231,7 @@ function renderBookCard(book) {
 
             <div class="book-card-content">
 
-                <h3>${statusEmoji[book.Status] || "📘"} ${book.Title} ${book.Pinned ? '<span style="font-size:14px;color:#facc15;">📌 Pinned</span>' : ""}</h3>
+                <h3>${statusEmoji[book.Status] || "📘"} ${book.Title}</h3>
 
                 ${book.Author ? `<p class="book-author">by ${book.Author}</p>` : ""}
 
