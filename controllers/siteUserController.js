@@ -50,6 +50,7 @@ const register = async (req, res) => {
         });
 
     } catch (err) {
+        console.error(err); 
         res.status(500).json({ success: false, message: err.message });
     }
 };
@@ -94,6 +95,7 @@ const login = async (req, res) => {
         });
 
     } catch (err) {
+        console.error(err); 
         res.status(500).json({ success: false, message: err.message });
     }
 };
@@ -136,6 +138,7 @@ const forgotPassword = async (req, res) => {
         res.json(genericResponse);
 
     } catch (err) {
+        console.error(err); 
         res.status(500).json({ success: false, message: err.message });
     }
 };
@@ -194,6 +197,7 @@ const resetPassword = async (req, res) => {
         });
 
     } catch (err) {
+        console.error(err); 
         res.status(500).json({ success: false, message: err.message });
     }
 };
