@@ -281,3 +281,17 @@ function renderUserAuthArea() {
 }
 
 renderUserAuthArea();
+
+function togglePassword(inputId, eyeEl) {
+
+    const input = document.getElementById(inputId);
+
+    if (input.type === "password") {
+        input.type = "text";
+        eyeEl.textContent = "🙈";
+    } else {
+        input.type = "password";
+        eyeEl.textContent = "👁️";
+    }
+
+}

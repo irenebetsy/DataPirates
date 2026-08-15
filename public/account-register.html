@@ -40,11 +40,15 @@
                 placeholder="Email"
                 required>
 
-            <input
-                type="password"
-                id="password"
-                placeholder="Password"
-                required>
+            <div style="position:relative;">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                    style="width:100%;">
+                <span onclick="togglePassword('password', this)" style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer;">👁️</span>
+            </div>
 
             <button type="submit">
 
