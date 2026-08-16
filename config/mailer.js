@@ -1,14 +1,18 @@
-const { Resend } = require("resend");
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+const https = require("https");
 
 async function sendPasswordResetEmail(toEmail, resetUrl) {
-
-    const { data, error } = await resend.emails.send({
-        from: process.env.EMAIL_FROM,
-        to: toEmail,
+    const data = JSON.stringify({
+        sender: {
+            name: "DataPirates",
+            email: process.env.MAIL_FROM
+        },
+        to: [
+            {
+                email: toEmail
+            }
+        ],
         subject: "Reset your Data Pirates password",
-        html: `
+        htmlContent: `
             <p>We received a request to reset your Data Pirates password.</p>
 
             <p>
@@ -24,12 +28,45 @@ async function sendPasswordResetEmail(toEmail, resetUrl) {
         `
     });
 
-    if (error) {
-        console.error("RESEND ERROR:", error);
-        throw new Error(error.message);
-    }
+    const options = {
+        hostname: "api.brevo.com",
+        path: "/v3/smtp/email",
+        method: "POST",
+        headers: {
+            "accept": "application/json",
+            "api-key": process.env.BREVO_API_KEY,
+            "content-type": "application/json",
+            "content-length": Buffer.byteLength(data)
+        }
+    };
 
-    console.log("RESEND EMAIL SENT:", data);
+    return new Promise((resolve, reject) => {
+        const req = https.request(options, (res) => {
+            let body = "";
+
+            res.on("data", (chunk) => {
+                body += chunk;
+            });
+
+            res.on("end", () => {
+                if (res.statusCode >= 200 && res.statusCode < 300) {
+                    console.log("BREVO EMAIL SENT:", body);
+                    resolve();
+                } else {
+                    console.error("BREVO ERROR:", res.statusCode, body);
+                    reject(new Error(`Brevo email failed: ${body}`));
+                }
+            });
+        });
+
+        req.on("error", (error) => {
+            console.error("BREVO CONNECTION ERROR:", error);
+            reject(error);
+        });
+
+        req.write(data);
+        req.end();
+    });
 }
 
 module.exports = { sendPasswordResetEmail };
